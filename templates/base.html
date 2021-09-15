@@ -1,0 +1,28 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<header>
+<center>Built by 200050114 200050127</center>
+</header>
+<nav class="navbar navbar-light bg-light">
+  <center><font size="+3">Welcome to GitHub Profiles!</font></center>
+{% if user.is_authenticated %}
+<center>
+<a class="btn btn-primary" href="/explore">Explore</a>
+<a class="btn btn-primary" href="/profile">My Profile</a>
+<a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+</center>
+{% else %}
+<center><a class="btn btn-primary" href="/register">Signup</a>
+<a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+</center>
+{% endif %}
+</nav>
+{% block content %}{% endblock %}
+</body>
+</html>
