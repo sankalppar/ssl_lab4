@@ -7,6 +7,7 @@ from github_profiles_app.models import Profile, Repository
 from django.contrib.auth.views import LoginView
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.utils import timezone
 import requests
 
 def register(request):
@@ -17,7 +18,7 @@ def register(request):
             if response.ok:
                 new_user = form.save()
                 profile_data = response.json()
-                prof = Profile(user=new_user, follow_count=profile_data['followers'], last_update=profile_data['updated_at'])
+                prof = Profile(user=new_user, follow_count=profile_data['followers'], last_update=timezone.now())
                 prof.save()
                 response = requests.get("https://api.github.com/users/" + form.cleaned_data['username'] + "/repos")
                 repo_data = response.json()
@@ -54,7 +55,7 @@ def update_user(request, username):
     if response.ok:
         profile_data = response.json()
         profile.follow_count = profile_data['followers']
-        profile.last_update = profile_data['updated_at']
+        profile.last_update = timezone.now()
         profile.save()
         response = requests.get("https://api.github.com/users/" + username + "/repos")
         repo_data = response.json()
