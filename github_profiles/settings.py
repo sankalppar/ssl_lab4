@@ -13,6 +13,7 @@ import os
 #import dotenv
 from pathlib import Path
 import dj_database_url
+import django_heroku
 
 
 
@@ -20,6 +21,8 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+django_heroku.settings(locals())
 
 #dotenv_file = os.path.join(BASE_DIR, ".env")
 #if os.path.isfile(dotenv_file):
@@ -84,7 +87,7 @@ WSGI_APPLICATION = 'github_profiles.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-'''DATABASES = {
+DATABASES = {
     'default' : {
         'ENGINE' : 'django.db.backends.postgresql',
         'NAME' : os.environ['NAME'],
@@ -92,7 +95,7 @@ WSGI_APPLICATION = 'github_profiles.wsgi.application'
         'PASSWORD' : os.environ['PASSWORD'],
         'HOST' : '127.0.0.1',
     }
-}'''
+}
 DATABASES['default'] = dj_database_url.config(conn_max-age = 600, ssl_require = True)
 
 # Password validation
