@@ -13,7 +13,6 @@ import os
 #import dotenv
 from pathlib import Path
 import dj_database_url
-#import django_heroku
 
 
 
@@ -22,7 +21,6 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-#django_heroku.settings(locals())
 
 #dotenv_file = os.path.join(BASE_DIR, ".env")
 #if os.path.isfile(dotenv_file):
@@ -123,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
