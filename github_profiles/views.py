@@ -35,10 +35,10 @@ def register(request):
     return render(request, 'signup.html', {'form': form})
 
 def get_user_profile(request, username):
-    user = User.objects.get(username=username)
+    userp = User.objects.get(username=username)
     profile = Profile.objects.get(user=user)
     repositories = Repository.objects.filter(creator=profile)
-    return render(request, 'user_profile.html', {"user":user, "profile":profile, "repositories":repositories})
+    return render(request, 'user_profile.html', {"userp":userp, "profile":profile, "repositories":repositories})
 
 def profile(request):
     return HttpResponseRedirect(reverse(get_user_profile, args=[request.user.username]))

@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
-{% block title %}My Name{% endblock %}
+{% block title %}Profile Page{% endblock %}
 
 {% block content %}
-<font size = "+3">{{ user.first_name }} {{ user.last_name }} (@{{ user.username }})</font>
+<font size = "+3">{{ userp.first_name }} {{ userp.last_name }} (@{{ userp.username }})</font>
 <br>
 <i>{{ profile.follow_count }} followers</i><br>
-<i>Profile last updated: {{ profile.last_update }}</i><a class="btn btn-primary" href="/update/{{ user.username }}">(Update Now)</a>
+<i>Profile last updated: {{ profile.last_update }}</i>
+{% if user.get_username == userp.username %}
+<a class="btn btn-primary" href="/update/{{ userp.username }}">(Update Now)</a>
+{% endif %}
 <br>
 <ul>
 {% for repo in repositories %}
