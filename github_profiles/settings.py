@@ -13,7 +13,7 @@ import os
 #import dotenv
 from pathlib import Path
 import dj_database_url
-import django_heroku
+#import django_heroku
 
 
 
@@ -22,7 +22,7 @@ import django_heroku
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 
 #dotenv_file = os.path.join(BASE_DIR, ".env")
 #if os.path.isfile(dotenv_file):
