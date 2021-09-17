@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'github_profiles.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default' : {
         'ENGINE' : 'django.db.backends.postgresql',
         'NAME' : os.environ['NAME'],
@@ -95,7 +95,8 @@ DATABASES = {
         'PASSWORD' : os.environ['PASSWORD'],
         'HOST' : '127.0.0.1',
     }
-}
+}'''
+DATABASES = {}
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 # Password validation
