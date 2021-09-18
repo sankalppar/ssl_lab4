@@ -12,7 +12,7 @@
 <header style="color:red;">
 <center>Built by 200050114 200050127</center>
 </header>
-<nav class="navbar navbar-dark bg-secondary">
+<nav class="navbar navbar-dark bg-primary">
 <div class="container">
   <font size="+3">Welcome to GitHub Profiles!</font>
 </div>
@@ -21,13 +21,13 @@
 <div class="container">
 {% if user.is_authenticated %}
 <center>
-<a class="btn btn-primary" href="/explore">Explore</a>
-<a class="btn btn-primary" href="/profile">My Profile</a>
-<a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+<a class="btn btn-danger" href="/explore">Explore</a>
+<a class="btn btn-danger" href="/profile">My Profile</a>
+<a class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
 </center>
 {% else %}
-<center><a class="btn btn-primary" href="/register">Signup</a>
-<a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+<center><a class="btn btn-danger" href="/register">Signup</a>
+<a class="btn btn-danger" href="{% url 'login' %}">Login</a>
 </center>
 {% endif %}
 </div>
