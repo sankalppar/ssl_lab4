@@ -5,7 +5,7 @@
 {% block content %}
 <ul>
 {% for profile in profiles %}
-<li><a class="btn btn-primary" href="/profile/{{ profile.username }}">{{ profile.username }}</a></li>
+<li><a class="btn btn-outline-primary" href="/profile/{{ profile.username }}">{{ profile.username }}</a></li>
 {% endfor %}
 </ul>
 {% endblock %}

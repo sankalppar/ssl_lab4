@@ -7,11 +7,12 @@
   <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-<header>
+<header style="color:red;">
 <center>Built by 200050114 200050127</center>
 </header>
 <nav class="navbar navbar-light bg-light">
   <center><font size="+3">Welcome to GitHub Profiles!</font></center>
+<br>
 {% if user.is_authenticated %}
 <center>
 <a class="btn btn-primary" href="/explore">Explore</a>
