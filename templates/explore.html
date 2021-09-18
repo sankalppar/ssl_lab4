@@ -3,8 +3,6 @@
 {% block title %}Explore{% endblock %}
 
 {% block content %}
-{% load static %}
-<link href="{% static 'style.css' %}" rel="stylesheet">
 <ul>
 {% for profile in profiles %}
 <li><a class="btn btn-outline-primary" href="/profile/{{ profile.username }}">{{ profile.username }}</a></li>
