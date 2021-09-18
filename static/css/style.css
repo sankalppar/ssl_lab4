@@ -15,14 +15,14 @@ header {
   text-align: center;
 }
 
-a:link {
+a.simple:link {
   color: red;
 }
 
-a:visited {
+a.simple:visited {
   color: green;
 }
 
-a:hover {
+a.simple:hover {
   color: hotpink;
 }

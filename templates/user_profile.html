@@ -8,7 +8,7 @@
 <i>{{ profile.follow_count }} followers</i><br>
 <i>Profile last updated: {{ profile.last_update }}</i>
 {% if userp.username == user.get_username %}
-<a href="/update/{{ userp.username }}">(Update Now)</a>
+(<a href="/update/{{ userp.username }}" class="simple">Update Now</a>)
 {% endif %}
 <br>
 <ul>
