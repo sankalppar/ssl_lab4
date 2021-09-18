@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block title %}Explore{% endblock %}
-{% load static %}
-<link href="{% static 'css/style.css' %}" rel="stylesheet">
 
 {% block content %}
+{% load static %}
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
 <ul>
 {% for profile in profiles %}
 <li><a class="btn btn-outline-primary" href="/profile/{{ profile.username }}">{{ profile.username }}</a></li>
