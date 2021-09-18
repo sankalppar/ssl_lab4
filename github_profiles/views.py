@@ -38,7 +38,7 @@ def get_user_profile(request, username):
     user = User.objects.get(username=username)
     profile = Profile.objects.get(user=user)
     repositories = Repository.objects.filter(creator=profile)
-    return render(request, 'user_profile.html', {"user":user, "profile":profile, "repositories":repositories})
+    return render(request, 'user_profile.html', {"userp":user, "profile":profile, "repositories":repositories})
 
 def profile(request):
     return HttpResponseRedirect(reverse(get_user_profile, args=[request.user.username]))
