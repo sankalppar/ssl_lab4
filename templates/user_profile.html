@@ -3,6 +3,7 @@
 {% block title %}Profile Page{% endblock %}
 
 {% block content %}
+<div class="container">
 <font size = "+3">{{ userp.first_name }} {{ userp.last_name }} (@{{ userp.username }})</font>
 <br>
 <i>{{ profile.follow_count }} followers</i><br>
@@ -16,4 +17,5 @@
 <li>{{ repo.name }} - {{ repo.num_star }}</li>
 {% endfor %}
 </ul>
+</div>
 {% endblock %}
