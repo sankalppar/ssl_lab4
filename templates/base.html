@@ -13,9 +13,12 @@
 <center>Built by 200050114 200050127</center>
 </header>
 <nav class="navbar navbar-light bg-light">
+<div class="container">
   <font size="+3">Welcome to GitHub Profiles!</font>
+</div>
 </nav>
 <nav class="navbar navbar-light bg-light">
+<div class="container">
 {% if user.is_authenticated %}
 <center>
 <a class="btn btn-primary" href="/explore">Explore</a>
@@ -27,6 +30,7 @@
 <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
 </center>
 {% endif %}
+</div>
 </nav>
 {% block content %}{% endblock %}
 </body>
