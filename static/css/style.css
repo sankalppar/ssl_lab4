@@ -7,3 +7,9 @@ body {
   color: white;
 }
 
+header {
+  text-align: center;
+  background: blue;
+  color: red;
+  padding: 5px;
+}
