@@ -1,3 +1,7 @@
+ul {
+  list-style-type: square;
+}
+
 ul li {
   margin: 15px;
 }
@@ -9,4 +13,16 @@ body {
 
 header {
   text-align: center;
+}
+
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: hotpink;
 }
